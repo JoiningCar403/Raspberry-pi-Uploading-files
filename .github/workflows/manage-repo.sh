@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory where the repository is located
-REPO_DIR="/path/to/your/repository"
+REPO_DIR="https://github.com/JoiningCar403/Raspberry-pi-Uploading-files/tree/main"
 
 # Navigate to the repository directory
 cd "$REPO_DIR" || { echo "Repository directory not found! Exiting."; exit 1; }
@@ -17,8 +17,6 @@ if [ "$LOCAL" != "$REMOTE" ]; then
     echo "New updates found! Pulling the latest changes."
     git pull origin main
 
-    # Optional: Execute a script or command after updating
-    ./backup_to_pi.sh
 else
     echo "Repository is up to date. No changes to pull."
 fi
